@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Menu_Button.tscn" type="PackedScene" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="MnuNewGame" parent="." instance=ExtResource( 1 )]
+margin_left = 376.0
+margin_top = 120.0
+margin_right = 651.0
+focus_neighbour_top = NodePath("../mnuExit")
+focus_neighbour_bottom = NodePath("../mnuOption")
+text = "New Game"
+
+[node name="mnuOption" parent="." instance=ExtResource( 1 )]
+margin_left = 376.0
+margin_top = 272.0
+margin_right = 644.0
+margin_bottom = 349.0
+focus_neighbour_top = NodePath("../MnuNewGame")
+focus_neighbour_bottom = NodePath("../mnuExit")
+text = "Options"
+
+[node name="mnuExit" parent="." instance=ExtResource( 1 )]
+margin_left = 376.0
+margin_top = 424.0
+margin_right = 643.0
+margin_bottom = 496.0
+focus_neighbour_top = NodePath("../mnuOption")
+focus_neighbour_bottom = NodePath("../MnuNewGame")
+text = "Exit"
